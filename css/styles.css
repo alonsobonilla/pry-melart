@@ -1,0 +1,644 @@
+
+:root {
+    --fuenteTitulos: 'Ovo', serif;
+    --fuenteRandom: 'Open Sans', sans-serif;
+    --fuenteParrafos: 'Questrial', sans-serif;
+
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #BFBEBE;
+    --amarillo: #F49300;
+    --colorTransparente: rgb(255 255 255 / 70%);
+    --colorFooter: #f5f5dc;
+
+    --framdanos: #721217;
+    --cafezana: #8F941C;
+    --maracumango: #EBC220;
+
+    --fondorecetas: #D9D9D9;
+    --colornav:#434240;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body {
+    font-size: 1.6rem;
+}
+  
+
+img {
+    max-width: 100%;
+}
+h1,h2,h3,h4 {
+    font-family: var(--fuenteTitulos);  
+}
+h4{
+    font-weight: 300;
+    font-size: 3rem;
+}
+a {
+    text-decoration: none;
+    font-family: var(--fuenteParrafos);
+}
+p {
+    margin: 0;
+    font-family: var(--fuenteParrafos);
+    line-height: 1.5;
+}
+li{
+    font-family: var(--fuenteParrafos);
+    list-style: none;
+}
+ul {
+    padding: 0;
+}
+
+/*Utilidades*/
+.contenedor {
+    max-width: 150rem;
+    margin: 0 auto;
+}
+.no-margin {
+    margin: 0;
+}
+.text-center {
+    text-align: center;
+}
+.margin-top {
+    margin-top: 2rem;
+}
+
+
+/*Header*/
+.header{
+    height: 55rem;
+    position: relative;
+}
+.video video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+.contenido-header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+.capa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--negro);
+    opacity: 0.78;
+    z-index: 2;
+}
+.contenido-header img{
+    width: 20rem;
+}
+
+.navegacion a{
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media(min-width: 768px){
+    .navegacion {
+        display: flex;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    .navegacion a {
+        margin: 0;
+    }
+}
+
+.navegacion a{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.navegacion a:hover {
+    color: var(--fondorecetas);
+}
+
+/*Main*/
+
+.fondo {
+    background-image: url(../img/fondo-pr.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: none;
+    background-size: cover;
+    margin-top: 2rem;
+}
+
+.productos {
+   /* margin: 4rem 0;*/
+    width: 100%;
+}
+@media(min-width: 1021px){
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        flex-wrap: wrap;
+    }  
+}
+
+
+.pr1 h2:hover {
+    color: var(--maracumango);
+}
+.pr2 h2:hover {
+    color: var(--framdanos);
+}
+.pr3 h2:hover {
+    color: var(--cafezana);
+}
+.main__contenido {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    align-items: center;
+    
+}
+@media(min-width: 768px){
+    .main__contenido {
+        margin-bottom: 0;
+    }
+}
+.main__contenido:last-of-type {
+    margin: 0;
+}
+.cont-1{
+    background-color: brown;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+.cont-2{
+    background-color:bisque;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+.cont-3{
+    background-color:burlywood;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+.productos h2 {
+    color: var(--negro);
+}
+
+
+/*Footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: var(--negro);
+    padding: 2rem;
+}
+.footer h3 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.contacto img {
+    width: 3.4rem;
+}
+.footer p {
+    text-align: center;
+}
+.footer h3 {
+    margin-bottom: 0;
+}
+
+.footer p,
+.footer h3{
+    color: var(--blanco);
+}
+/*NOSOTROS*/    
+@media(min-width: 768px){
+    .contenedor-nosotros {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+}
+.main-nosotros {
+    margin: 10rem 0;
+}
+.main-nosotros img{
+    opacity: 0.3;
+}
+.main-nosotros h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.main-nosotros h2{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.main-nosotros__servicios {
+    margin-bottom: 2rem;
+}
+.main-nosotros__mision {
+    margin: 2rem 0;
+
+}
+.main-nosotros__manifiesto {
+    margin-top: 2rem;
+}
+.mision {
+    margin-bottom: 4rem;
+}
+
+
+/*Productos*/
+.contenedor-producto {
+    max-width: 90%;
+    margin: 5rem auto;
+}
+@media(min-width: 768px){
+    .contenido-producto {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+
+.cont-pr {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/*producto1*/
+.img-pr1 {
+    height: 60rem;
+}
+.presentacion-prd1 {
+    width: 35rem;
+}
+/*producto2*/
+.img-pr2 {
+    height: 60rem;
+    width: 50rem;
+}
+.presentacion-prd2 {
+    width: 36rem;
+}
+.cont-pr2 {
+    text-align: center;
+}
+@media(min-width: 768px){
+    .cont-pr2 {
+        width: 60rem;
+    }
+    .cont-pr {
+        margin-bottom: 0;
+    }
+}
+
+/*producto3*/
+.img-pr3 {
+    width: 30rem;
+}
+
+.titulo-producto {
+    text-align: left;
+    border-bottom: 4px solid var(--gris);
+}
+.titulo-producto h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+.titulo-producto span{
+    color: var(--gris);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+.titulo-producto--margin {
+    margin-bottom: 2rem;
+}
+.contenido-producto__principal {
+    margin: 3rem 0;
+    padding: 0 3rem;
+}
+.contenido-producto__principal h3{
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+.contenido-producto__principal p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+.margin-principal {
+    margin-bottom: 2rem;
+}
+.principal--color1 {
+    color: var(--maracumango);
+}
+.principal--color2 {
+    color: var(--framdanos);
+}
+.principal--color3 {
+    color: var(--cafezana);
+}
+
+/*Sidebar*/
+.font-size {
+    font-size: 3rem;
+}
+
+.sidebar__precio {
+    font-size: 6rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.cantidad {
+    background-color: var(--gris);
+    color: var(--blanco);
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+}
+.agregar {
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.agregar-color1 {
+    background-color: var(--maracumango);
+}
+.precio__1 {
+    color: var(--maracumango);
+}
+.agregar-color2{
+    background-color: var(--framdanos);
+}
+.precio__2 {
+    color: var(--framdanos);
+}
+.agregar-color3 {
+    background-color: var(--cafezana);
+}   
+.precio__3 {
+    color: var(--cafezana);
+}
+.despacho-recojo {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.despacho-color1:hover {
+    background-color: var(--maracumango);
+}
+.despacho-color2:hover {
+    background-color: var(--framdanos)
+}
+.despacho-color3:hover {
+    background-color: var(--cafezana);
+}
+.img-efecto img {
+    transition: 0.5s;
+    object-fit: cover;
+}
+.img-efecto img:hover {
+    transform: scale(1.2);
+}
+
+/*Recetas*/
+.contenedor-recetas {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+.receta__contenido {
+    margin-bottom: 2rem;
+}
+@media(min-width: 768px){
+    .receta__contenido {
+        margin-bottom: 0;
+    }
+}
+/*Imagenes recetas*/
+
+.receta__imagen {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 65rem;
+    margin-top: 2rem;
+}
+
+.receta__imagen-r1 {
+    background-image: url(../img/Chescake\ maracumango.jpeg); 
+}
+.receta__imagen-r2 {
+    background-image: url(../img/Chescake\ maracumango2.jpeg);
+}
+.receta__imagen-r3 {
+    background-image: url(../img/Wafles\ con\ framdanos.jpeg);
+}
+.receta__imagen-r4 {
+    background-image: url(../img/Panqueques\ con\ framdanos.jpeg);
+}
+.receta__imagen-r5 {
+    background-image: url(../img/Pie\ de\ mermelada\ de\ cafezana.jpeg);
+}
+.receta__imagen-r6 {
+    background-image: url(../img/Cupcakes.jpeg);
+}
+    /*Receta tipo1 */
+.receta-color {
+    background-color: var(--fondorecetas);
+    padding: 5rem;
+}
+@media(min-width: 768px){
+    .receta-tipo1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        align-items: center;
+    } 
+}
+.receta__contenido__parrafos {
+    text-align: justify;
+}
+    /*Receta tipo 2*/
+.receta-tipo2{
+    padding: 4rem;
+}
+@media(min-width: 768px){
+    .receta-tipo2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        align-items: center;
+    }
+    .receta-tipo2__contenido {
+        order: 2;
+    }
+}
+
+.receta__imagen-ingredientes {
+    background-color: var(--colorTransparente);
+    transition: 0.5s;
+    cursor: none;
+    padding: 2rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+}
+@media(min-width: 1280px){
+    .receta__imagen {
+        height: 75rem;
+    }
+    .receta__imagen-r1 {
+        width: 61rem;
+    }
+    .receta__imagen-r2 {
+        width: 59rem;
+    }
+    .receta__imagen-r3 {
+        width: 62rem;
+    }
+    .receta__imagen-r4 {
+        width: 63rem;
+    }
+    .receta__imagen-r5 {
+        width: 56.5rem;
+    }
+    .receta__imagen-r6 {
+        width: 61rem;
+    }
+    .receta__imagen-ingredientes {
+        right:auto;
+        left: 17rem;
+    }
+}
+
+.receta__imagen-ingredientes:hover {
+    transform: scale(1.1);
+}
+.receta__imagen-ingredientes h4,
+.receta__imagen-ingredientes li{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+/*Contacto*/
+.contenedor--contacto {
+    max-width: 90rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.contenedor--contacto h2 {
+    text-transform: uppercase;
+}
+.formulario {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;  
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+.campo-mensaje {
+    grid-column: 1/3;
+}
+.nombre-correo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.campo__field {
+    border: 1px solid var(--gris);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.campo label {
+    font-family: var(--fuenteParrafos);
+}
+.campo__field--textarea {
+    border: 1px solid var(--gris);
+    padding: 1rem;
+    width: 100%;
+    height: 20rem;
+    resize: none;
+    margin-top: 1rem;
+}
+.boton {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.campo-flex{
+    grid-column: 1/3;
+}
+@media(min-width: 768px){
+    .campo-boton {
+        grid-column:  1/2;
+        width: 15rem;
+        grid-row-end: auto;
+    }
+    .campo-flex {
+        grid-column: 1/3;
+        gap: 2rem;
+    }
+    .campo__field {
+        margin: 0;
+    }
+}
+.campo-boton {
+    grid-column: 1/3;
+}
+
+
